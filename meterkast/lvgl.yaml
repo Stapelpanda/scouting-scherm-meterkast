@@ -35,7 +35,7 @@ lvgl:
                 align: center
                 text: "Lokaal 1"
       - button:
-          x: 460
+          x: 450
           y: 150
           width: $button_width
           height: $button_height_single
@@ -83,7 +83,7 @@ lvgl:
                 align: center
                 text: "Lokaal 5"
       - button:
-          x: 460
+          x: 450
           y: 380
           width: $button_width
           height: $button_height_single
