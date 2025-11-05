@@ -18,7 +18,7 @@ lvgl:
         type: flex
         flex_flow: column_wrap
       width: 100%
-      bg_color: Black
+      bg_image_src: background_img
       bg_opa: cover
       pad_top: 30
       pad_bottom: 5

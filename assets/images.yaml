@@ -1,0 +1,4 @@
+image:
+  - file: "background.png"
+    type: binary
+    id: background_img
