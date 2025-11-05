@@ -1,5 +1,5 @@
 binary_sensor:
-  - platform: template
+  - platform: homeassistant
     id: airco_1_mode
     lambda: |-
       if (id(climate.airco_lokaal_1_airco).has_state()) {
