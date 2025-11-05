@@ -22,3 +22,14 @@ lvgl:
           id: floorplan
           src: boogaerd
           align: BOTTOM_RIGHT
+      - button:
+          x: 100
+          y: 60
+          width: $button_width
+          height: $button_height_single
+          id: lokaal1
+          checkable: true
+          widgets:
+            - label:
+                align: center
+                text: "Lokaal 1"
