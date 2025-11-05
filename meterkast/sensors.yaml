@@ -1,20 +1,21 @@
 text_sensor:
   - platform: homeassistant
-    entity_id:  climate.airco_lokaal_1_airco
+    entity_id: climate.airco_lokaal_1_airco
     id: airco_1_state
-    attribute: state
+    attribute: hvac_action  # Of gebruik 'state' als je de hvac_mode wilt
 
 binary_sensor:
   - platform: template
     id: airco_1_switch
     lambda: |-
       if (id(airco_1_state).has_state()) {
-        return id(airco_1_state).state == "off";
+        std::string state = id(airco_1_state).state;
+        return state != "off" && state != "idle";
       }
       return false;
     on_state:
       then:
-        lvgl.widget.update:
-          id: lokaal1
-          state:
-            checked: !lambda return x;
+        - lvgl.widget.update:
+            id: lokaal1
+            state:
+              checked: !lambda return x;
