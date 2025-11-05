@@ -40,6 +40,7 @@ ota:
 
 # Enable Home Assistant API
 api:
+  services:
 
 # Enable logging
 logger:
