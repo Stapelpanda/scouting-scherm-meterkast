@@ -1,5 +1,3 @@
-# http://materialdesignicons.com/cdn/7.4.47/
-
 # Define icons used
 font:
   - file: 'https://github.com/Templarian/MaterialDesign-Webfont/raw/v7.4.47/fonts/materialdesignicons-webfont.ttf'
@@ -8,8 +6,8 @@ font:
     bpp: 4
     glyphs: [
       "\U000F1471", # Fann off
-      "\U000F146E ", # Fann on
-      ]
+      "\U000F146E" # Fann on
+    ]
 
 # Map icons to names
 substitutions:
