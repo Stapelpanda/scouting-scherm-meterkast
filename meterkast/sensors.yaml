@@ -1,14 +1,14 @@
-text_sensor:
-  - platform: homeassistant
+binary_sensor:
+  - platform: template
     id: airco_1_mode
-    entity_id: climate.airco_lokaal_1_airco
-    attribute: hvac_mode
-    on_value:
+    lambda: |-
+      if (id(limate.airco_lokaal_1_airco).has_state()) {
+        return limate.airco_lokaal_1_airco.state == "off";
+      }
+      return false;
+    on_state:
       then:
-        - lambda: |-
-            auto mode = id(airco_1_mode).state;
-            if (mode == "off") {
-              id(lokaal1).set_checked(false);
-            } else {
-              id(lokaal1).set_checked(true);
-            }
+        lvgl.widget.update:
+          id: lokaal1
+          state:
+            checked: !lambda return x;
