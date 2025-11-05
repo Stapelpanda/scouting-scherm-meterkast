@@ -1,10 +1,15 @@
-binary_sensor:
+sensor:
   - platform: homeassistant
-    id: airco_1_mode
-    entity_id: climate.airco_lokaal_1_airco
+    entity_id:  climate.airco_lokaal_1_airco
+    id: airco_1_state
+    attribute: state
+
+binary_sensor:
+  - platform: template
+    id: airco_1_switch
     lambda: |-
-      if (id(climate.airco_lokaal_1_airco).has_state()) {
-        return climate.airco_lokaal_1_airco.state == "off";
+      if (id(airco_1_state).has_state()) {
+        return id(airco_1_state).state == "off";
       }
       return false;
     on_state:
