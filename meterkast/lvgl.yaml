@@ -18,7 +18,7 @@ lvgl:
         type: flex
         flex_flow: column_wrap
       width: 100%
-      bg_image: boogaerd
+      bg_image_src: boogaerd
       bg_opa: cover
       pad_top: 0
       pad_bottom: 0
