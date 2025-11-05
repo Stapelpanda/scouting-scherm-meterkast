@@ -18,13 +18,12 @@ lvgl:
         type: flex
         flex_flow: column_wrap
       width: 100%
-      bg_: Black
+      bg_image: boogaerd
       bg_opa: cover
-      pad_top: 30
-      pad_bottom: 5
-      pad_left: 5
-      pad_right: 5
-      lambda: |-
-        it.image(0, 0, id(boogaerd));
+      pad_top: 0
+      pad_bottom: 0
+      pad_left: 0
+      pad_right: 0
+
       widgets:
         
