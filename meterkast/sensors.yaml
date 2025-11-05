@@ -8,7 +8,7 @@ text_sensor:
         - lambda: |-
             auto mode = id(airco_1_mode).state;
             if (mode == "off") {
-              id(lokaal1).set_state_checked(false);
+              id(lokaal1).set_checked(false);
             } else {
-              id(lokaal1).set_state_checked(true);
+              id(lokaal1).set_checked(true);
             }
