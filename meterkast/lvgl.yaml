@@ -23,13 +23,86 @@ lvgl:
           src: boogaerd
           align: BOTTOM_RIGHT
       - button:
-          x: 100
-          y: 60
+          x: 270
+          y: 130
           width: $button_width
           height: $button_height_single
           id: lokaal1
+          styles: control
           checkable: true
           widgets:
             - label:
                 align: center
                 text: "Lokaal 1"
+      - button:
+          x: 460
+          y: 130
+          width: $button_width
+          height: $button_height_single
+          id: lokaal2
+          styles: control
+          checkable: true
+          widgets:
+            - label:
+                align: center
+                text: "Lokaal 2"
+      - button:
+          x: 630
+          y: 130
+          width: $button_width
+          height: $button_height_single
+          id: lokaal3
+          styles: control
+          checkable: true
+          widgets:
+            - label:
+                align: center
+                text: "Lokaal 3"
+      - button:
+          x: 630
+          y: 230
+          width: $button_width
+          height: $button_height_single
+          styles: control
+          id: lokaal4
+          checkable: true
+          widgets:
+            - label:
+                align: center
+                text: "Lokaal 4"
+      - button:
+          x: 630
+          y: 360
+          width: $button_width
+          height: $button_height_single
+          styles: control
+          id: lokaal5
+          checkable: true
+          widgets:
+            - label:
+                align: center
+                text: "Lokaal 5"
+      - button:
+          x: 460
+          y: 360
+          width: $button_width
+          height: $button_height_single
+          id: lokaal6
+          styles: control
+          checkable: true
+          widgets:
+            - label:
+                align: center
+                text: "Lokaal 6"
+      - button:
+          x: 270
+          y: 360
+          width: $button_width
+          height: $button_height_single
+          id: lokaal8
+          styles: control
+          checkable: true
+          widgets:
+            - label:
+                align: center
+                text: "Lokaal 8"
