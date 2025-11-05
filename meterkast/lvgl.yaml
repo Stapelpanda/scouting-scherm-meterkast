@@ -68,8 +68,7 @@ lvgl:
             then:
               - lvgl.label.update:
                   id: lokaal1_icon
-                  text: !lambda |-
-                    return x ? $heating_on : $heating_off;
+                  text: !lambda "return x ? $heating_on : $heating_off;"
 
       - button:
           x: 450
