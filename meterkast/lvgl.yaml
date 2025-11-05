@@ -64,9 +64,6 @@ lvgl:
                 text_font: $icon_font
                 align: LEFT_MID
                 text: $heating_off
-                state_styles:
-                  checked:
-                    text: $heating_on
       - button:
           x: 450
           y: 150
