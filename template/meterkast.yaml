@@ -1,8 +1,7 @@
 # ESP32-S3-Touch-LCD-7
 substitutions:
-  name: "your-device-name"
-  friendly_name: "Your Room Sensor"
-  room: "Your Room"
+  name: "meterkast-display"
+  friendly_name: "Meterkast"
 
 # Wifi Setup
 wifi:
@@ -20,6 +19,6 @@ packages:
             assets/fonts.yaml,
             assets/icons.yaml,
             theme/button.yaml,
-            office/sensors.yaml,
-            office/lvgl.yaml]
+            meterkast/sensors.yaml,
+            meterkast/lvgl.yaml]
     refresh: 1sec
