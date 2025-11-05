@@ -25,4 +25,4 @@ lvgl:
       - image:
           id: floorplan
           src: boogaerd
-          align: CENTER
+          align: BOTTOM_RIGHT
