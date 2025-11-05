@@ -2,8 +2,10 @@ binary_sensor:
   - platform: homeassistant
     id: airco_1_status
     entity_id: climate.airco_lokaal_1_airco
+    trigger_on_initial_state: true
     on_state:
       then:
-        - lvgl.widget.update:
-            id: lokaal1
-            checked: !lambda 'return x == "off";'
+        lvgl.widget.update:
+          id: lokaal1
+          state:
+            checked: !lambda return x == "off";;
