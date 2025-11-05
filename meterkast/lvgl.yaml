@@ -22,6 +22,31 @@ lvgl:
           id: floorplan
           src: boogaerd
           align: BOTTOM_RIGHT
+
+      - button:
+          x: 10
+          y: 100
+          width: $button_width
+          height: $button_height_single
+          id: padverlichting
+          styles: control
+          checkable: true
+          widgets:
+            - label:
+                align: center
+                text: "Padverlichting"
+      - button:
+          x: 101
+          y: 150
+          width: $button_width
+          height: $button_height_single
+          id: veldverlichting
+          styles: control
+          checkable: true
+          widgets:
+            - label:
+                align: center
+                text: "Veldverlichting"
       - button:
           x: 270
           y: 150
