@@ -40,11 +40,12 @@ ota:
 
 # Enable Home Assistant API
 api:
-  services:
 
 # Enable logging
 logger:
-
+  level: DEBUG
+  logs:
+    homeassistant.text_sensor: DEBUG
 # Video memory
 psram:
   mode: octal
