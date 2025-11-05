@@ -67,8 +67,7 @@ lvgl:
           id: lokaal1
           styles: control
           checkable: true
-          checked: !lambda |-
-            return id(climate_airco_lokaal_1_airco).mode != "off";
+          checked: !lambda return id(climate_airco_lokaal_1_airco).mode != "off";
           widgets:
             - label:
                 align: RIGHT_MID
@@ -87,8 +86,7 @@ lvgl:
           id: lokaal2
           styles: control
           checkable: true
-          checked: !lambda |-
-            return id(climate_airco_lokaal_2_airco).mode != "off";
+          checked: !lambda return id(climate_airco_lokaal_2_airco).mode != "off";
           widgets:
             - label:
                 align: RIGHT_MID
@@ -107,8 +105,7 @@ lvgl:
           id: lokaal3
           styles: control
           checkable: true
-          checked: !lambda |-
-            return id(climate_airco_lokaal_3_airco).mode != "off";
+          checked: !lambda return id(climate_airco_lokaal_3_airco).mode != "off";
           widgets:
             - label:
                 align: RIGHT_MID
@@ -127,8 +124,7 @@ lvgl:
           styles: control
           id: lokaal4
           checkable: true
-          checked: !lambda |-
-            return id(climate_airco_lokaal_4_airco).mode != "off";
+          checked: !lambda return id(climate_airco_lokaal_4_airco).mode != "off";
           widgets:
             - label:
                 align: RIGHT_MID
@@ -147,8 +143,7 @@ lvgl:
           styles: control
           id: lokaal5
           checkable: true
-          checked: !lambda |-
-            return id(climate_airco_lokaal_5_airco).mode != "off";
+          checked: !lambda return id(climate_airco_lokaal_5_airco).mode != "off";
           widgets:
             - label:
                 align: RIGHT_MID
@@ -167,8 +162,7 @@ lvgl:
           id: lokaal6
           styles: control
           checkable: true
-          checked: !lambda |-
-            return id(climate_airco_lokaal_6_airco).mode != "off";
+          checked: !lambda return id(climate_airco_lokaal_6_airco).mode != "off";
           widgets:
             - label:
                 align: RIGHT_MID
@@ -187,8 +181,7 @@ lvgl:
           id: lokaal8
           styles: control
           checkable: true
-          checked: !lambda |-
-            return id(climate_airco_lokaal_8_airco).mode != "off";
+          checked: !lambda return id(climate_airco_lokaal_8_airco).mode != "off";
           widgets:
             - label:
                 align: RIGHT_MID
