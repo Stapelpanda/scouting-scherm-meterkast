@@ -26,7 +26,7 @@ lvgl:
       - button:
           x: 10
           y: 100
-          width: $button_width
+          width: $button_width_left
           height: $button_height_single
           id: padverlichting
           styles: control
@@ -36,9 +36,9 @@ lvgl:
                 align: center
                 text: "Padverlichting"
       - button:
-          x: 101
+          x: 10
           y: 150
-          width: $button_width
+          width: $button_width_left
           height: $button_height_single
           id: veldverlichting
           styles: control
