@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1565 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Buitenmuur" transform="matrix(0,1,-1,0,1565,0)">
+        <path d="M160.083,1504.559L160.083,1258.476L54.31,1258.476L54.31,51.807L1021.372,51.807L1021.372,1504.559L160.083,1504.559Z" style="fill:none;stroke:white;stroke-width:13.33px;"/>
+    </g>
+    <g id="Keuken" transform="matrix(0,1,-1,0,1565,0)">
+        <rect x="457.972" y="837.545" width="224.497" height="168.372" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+    </g>
+    <g id="Schoonmaakkast" transform="matrix(0,1,-1,0,1565,0)">
+        <path d="M457.972,1005.917L457.972,1200.193L534.099,1200.193L534.099,1092.895L457.972,1092.895" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+    </g>
+    <g id="Toilet-Buiten" serif:id="Toilet Buiten" transform="matrix(0,1,-1,0,1565,0)">
+        <rect x="457.972" y="1405.262" width="224.497" height="99.297" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+    </g>
+    <g id="ToiletMuur" transform="matrix(0,1,-1,0,1565,0)">
+        <path d="M540,1504.559L540,1405.262L609.076,1405.262L609.076,1504.559" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+    </g>
+    <g id="Lokaal-8" serif:id="Lokaal 8" transform="matrix(0,1,-1,0,1565,0)">
+        <rect x="682.469" y="1005.917" width="338.903" height="498.641" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+    </g>
+    <g id="Lokaal-6" serif:id="Lokaal 6" transform="matrix(0,1,-1,0,1565,0)">
+        <path d="M714.848,554.766L1021.372,554.766L1021.372,1005.917L682.469,1005.917L682.469,837.545L457.972,837.545L457.972,699.393L540,623.841L650.09,623.841L714.848,554.766Z" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+    </g>
+    <g id="Lokaal-5" serif:id="Lokaal 5" transform="matrix(0,1,-1,0,1565,0)">
+        <path d="M673.834,51.807L1021.372,51.807L1021.372,554.766L714.848,554.766L659.309,498.45L673.834,481.651L673.834,51.807Z" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+    </g>
+    <g id="Lokaal-4" serif:id="Lokaal 4" transform="matrix(0,1,-1,0,1565,0)">
+        <path d="M673.834,51.807L673.834,481.651L609.076,541.814L373.786,541.814L373.786,51.807L673.834,51.807Z" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+    </g>
+    <g id="Lokaal-3" serif:id="Lokaal 3" transform="matrix(0,1,-1,0,1565,0)">
+        <path d="M54.31,51.807L373.786,51.807L373.786,541.814L318.904,585L293.917,554.766L54.31,554.766L54.31,51.807Z" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+    </g>
+    <g id="Lokaal-2" serif:id="Lokaal 2" transform="matrix(0,1,-1,0,1565,0)">
+        <path d="M54.31,1258.476L160.083,1258.476L160.083,1005.917L373.786,1005.917L373.786,667.014L293.917,554.766L54.31,554.766L54.31,1258.476Z" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+    </g>
+    <g id="Lokaal-1" serif:id="Lokaal 1" transform="matrix(0,1,-1,0,1565,0)">
+        <rect x="160.083" y="1005.917" width="213.703" height="498.641" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+    </g>
+</svg>
