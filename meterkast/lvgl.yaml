@@ -23,6 +23,6 @@ lvgl:
 
       widgets:
       - image:
-        align: CENTER
-        src: cat_image
-        id: boogaerd
+          align: CENTER
+          src: boogaerd
+          id: floorplan
