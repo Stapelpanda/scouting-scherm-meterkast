@@ -14,10 +14,9 @@ lvgl:
           
   pages:
     - id: main_page
-      layout: 
-        type: flex
-        flex_flow: column_wrap
+      layout: none
       width: 100%
+      height: 100%
       bg_color: Black
       bg_opa: cover
 
