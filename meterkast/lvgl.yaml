@@ -23,6 +23,7 @@ lvgl:
 
       widgets:
       - image:
-          align: CENTER
+          offset_x: 80
+          offset_y: 30
           src: boogaerd
           id: floorplan
