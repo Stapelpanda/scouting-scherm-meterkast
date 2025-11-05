@@ -1,4 +1,4 @@
 image:
-  - file: "background.png"
+  - file: "https://raw.githubusercontent.com/Stapelpanda/scouting-scherm-meterkast/refs/heads/main/assets/background.png"
     type: binary
     id: background_img
