@@ -2,8 +2,8 @@ binary_sensor:
   - platform: template
     id: airco_1_mode
     lambda: |-
-      if (id(limate.airco_lokaal_1_airco).has_state()) {
-        return limate.airco_lokaal_1_airco.state == "off";
+      if (id(climate.airco_lokaal_1_airco).has_state()) {
+        return climate.airco_lokaal_1_airco.state == "off";
       }
       return false;
     on_state:
