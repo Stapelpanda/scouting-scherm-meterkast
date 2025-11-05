@@ -184,10 +184,3 @@ lvgl:
                 text_font: $icon_font
                 align: LEFT_MID
                 text: $heating_off
-          on_click:
-            - homeassistant.service:
-                service: climate.set_hvac_mode
-                data:
-                    entity_id: climate.airco_lokaal_8_airco
-                    hvac_mode: !lambda |-
-                        return id(climate_airco_lokaal_8_airco).mode == "off" ? "cool" : "off";

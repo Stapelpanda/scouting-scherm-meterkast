@@ -1,9 +1,10 @@
-homeassistant:
-  - id: airco_status
+binary_sensor:
+  - platform: homeassistant
+    id: airco_1_status
     entity_id: climate.airco_lokaal_1_airco
-    attribute: hvac_action
+    trigger_on_initial_state: true
     on_value:
       then:
         - lvgl.widget.update:
-            id: veldverlichting
+            id: lokaal1
             checked: !lambda 'return x == "off";'
