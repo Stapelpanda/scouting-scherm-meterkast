@@ -57,8 +57,16 @@ lvgl:
           checkable: true
           widgets:
             - label:
-                align: center
+                align: right
                 text: "Lokaal 1"
+            - label:
+                id: lokaal1_icon
+                text_font: $icon_font
+                align: left
+                text: $heating_off
+                state_styles:
+                  checked:
+                    text: $heating_on
       - button:
           x: 450
           y: 150
