@@ -18,12 +18,11 @@ lvgl:
         type: flex
         flex_flow: column_wrap
       width: 100%
-      bg_image_src: boogaerd
+      bg_color: Black
       bg_opa: cover
-      pad_top: 0
-      pad_bottom: 0
-      pad_left: 0
-      pad_right: 0
 
       widgets:
-        
+      - image:
+        align: CENTER
+        src: cat_image
+        id: boogaerd
