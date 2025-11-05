@@ -1,4 +1,4 @@
-sensor:
+text_sensor:
   - platform: homeassistant
     entity_id:  climate.airco_lokaal_1_airco
     id: airco_1_state
