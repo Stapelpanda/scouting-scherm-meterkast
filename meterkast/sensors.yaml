@@ -1,6 +1,7 @@
 binary_sensor:
   - platform: homeassistant
     id: airco_1_mode
+    entity_id: climate.airco_lokaal_1_airco
     lambda: |-
       if (id(climate.airco_lokaal_1_airco).has_state()) {
         return climate.airco_lokaal_1_airco.state == "off";
