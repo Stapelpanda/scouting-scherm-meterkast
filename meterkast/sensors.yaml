@@ -19,3 +19,9 @@ binary_sensor:
             id: lokaal1
             state:
               checked: !lambda return x;
+
+interval:
+  - interval: 10s
+    then:
+      - lambda: |-
+          ESP_LOGI("airco_log", "Airco 1 text_state: %s", id(airco_1_state).state.c_str());
