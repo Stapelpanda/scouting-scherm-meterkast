@@ -64,6 +64,20 @@ lvgl:
                 text_font: $icon_font
                 align: LEFT_MID
                 text: $heating_off
+          events:
+            - event: value_changed
+              actions:
+                - if:
+                    condition: "obj.get_state('checked')"
+                    then:
+                      - label.set_text:
+                          id: lokaal1_icon
+                          text: $heating_on
+                    else:
+                      - label.set_text:
+                          id: lokaal1_icon
+                          text: $heating_off
+
       - button:
           x: 450
           y: 150
