@@ -33,8 +33,14 @@ lvgl:
           checkable: true
           widgets:
             - label:
-                align: center
+                align: RIGHT_MID
                 text: "Padverlichting"
+            - label:
+                id: padverlichting_icon
+                text_font: $icon_font
+                align: LEFT_MID
+                text: $lamp
+
       - button:
           x: 10
           y: 150
@@ -45,8 +51,14 @@ lvgl:
           checkable: true
           widgets:
             - label:
-                align: center
+                align: RIGHT_MID
                 text: "Veldverlichting"
+            - label:
+                id: veldverlichting_icon
+                text_font: $icon_font
+                align: LEFT_MID
+                text: $lamp
+
       - button:
           x: 270
           y: 150
@@ -64,11 +76,6 @@ lvgl:
                 text_font: $icon_font
                 align: LEFT_MID
                 text: $heating_off
-          on_value:
-            then:
-            - lvgl.label.update:
-                id: lokaal1_icon
-                text: !lambda "return x ? $heating_on : $heating_off;"
 
       - button:
           x: 450
@@ -80,8 +87,14 @@ lvgl:
           checkable: true
           widgets:
             - label:
-                align: center
+                align: RIGHT_MID
                 text: "Lokaal 2"
+            - label:
+                id: lokaal2_icon
+                text_font: $icon_font
+                align: LEFT_MID
+                text: $heating_off
+
       - button:
           x: 630
           y: 150
@@ -92,8 +105,14 @@ lvgl:
           checkable: true
           widgets:
             - label:
-                align: center
+                align: RIGHT_MID
                 text: "Lokaal 3"
+            - label:
+                id: lokaal3_icon
+                text_font: $icon_font
+                align: LEFT_MID
+                text: $heating_off
+
       - button:
           x: 630
           y: 250
@@ -104,8 +123,14 @@ lvgl:
           checkable: true
           widgets:
             - label:
-                align: center
+                align: RIGHT_MID
                 text: "Lokaal 4"
+            - label:
+                id: lokaal4_icon
+                text_font: $icon_font
+                align: LEFT_MID
+                text: $heating_off
+
       - button:
           x: 630
           y: 380
@@ -116,8 +141,14 @@ lvgl:
           checkable: true
           widgets:
             - label:
-                align: center
+                align: RIGHT_MID
                 text: "Lokaal 5"
+            - label:
+                id: lokaal5_icon
+                text_font: $icon_font
+                align: LEFT_MID
+                text: $heating_off
+
       - button:
           x: 450
           y: 380
@@ -128,8 +159,14 @@ lvgl:
           checkable: true
           widgets:
             - label:
-                align: center
+                align: RIGHT_MID
                 text: "Lokaal 6"
+            - label:
+                id: lokaal6_icon
+                text_font: $icon_font
+                align: LEFT_MID
+                text: $heating_off
+
       - button:
           x: 270
           y: 380
@@ -140,5 +177,10 @@ lvgl:
           checkable: true
           widgets:
             - label:
-                align: center
+                align: RIGHT_MID
                 text: "Lokaal 8"
+            - label:
+                id: lokaal8_icon
+                text_font: $icon_font
+                align: LEFT_MID
+                text: $heating_off

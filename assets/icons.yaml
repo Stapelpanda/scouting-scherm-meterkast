@@ -6,10 +6,12 @@ font:
     bpp: 4
     glyphs: [
       "\U000F1471", # Fann off
-      "\U000F146E" # Fann on
+      "\U000F146E", # Fann on
+      "\U000F0335"  # mdi-lightbulb
     ]
 
 # Map icons to names
 substitutions:
   heating_on: "\U000F146E"
   heating_off: "\U000F1471"
+  lamp: "\U000F0335"
