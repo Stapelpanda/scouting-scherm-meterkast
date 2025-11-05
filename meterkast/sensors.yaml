@@ -2,7 +2,7 @@ text_sensor:
   - platform: homeassistant
     entity_id: climate.airco_lokaal_1_airco
     id: airco_1_state
-    attribute: hvac_action  # Of gebruik 'state' als je de hvac_mode wilt
+    attribute: state
 
 binary_sensor:
   - platform: template
