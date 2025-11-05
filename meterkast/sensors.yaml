@@ -2,7 +2,7 @@ text_sensor:
   - platform: homeassistant
     entity_id: climate.airco_lokaal_1_airco
     id: airco_1_state
-    attribute: state
+    # Verwijder de 'attribute: state' regel - de state wordt automatisch gesynchroniseerd
 
 binary_sensor:
   - platform: template
@@ -24,4 +24,8 @@ interval:
   - interval: 10s
     then:
       - lambda: |-
-          ESP_LOGI("airco_log", "Airco 1 text_state: %s", id(airco_1_state).state.c_str());
+          if (id(airco_1_state).has_state()) {
+            ESP_LOGI("airco_log", "Airco 1 state: %s", id(airco_1_state).state.c_str());
+          } else {
+            ESP_LOGI("airco_log", "Airco 1 state: no state yet");
+          }
