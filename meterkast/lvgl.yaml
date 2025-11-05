@@ -24,6 +24,5 @@ lvgl:
       widgets:
       - image:
           id: floorplan
-          x: 80
-          y: 30
           src: boogaerd
+          align: CENTER
