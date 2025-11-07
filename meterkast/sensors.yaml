@@ -1,14 +1,26 @@
-text_sensor:
+sensor:
   - platform: homeassistant
+    id: lokaal1_temperature
     entity_id: climate.airco_lokaal_1_airco
-    id: airco_1_state
-    # Verwijder de 'attribute: state' regel - de state wordt automatisch gesynchroniseerd
+    attribute: current_temperature
+
+script:
+  - id: temp_update
+    then:
+      - lvgl.label.update:
+          id: display_temp
+          text: !lambda |-
+            static char time_buf[17];
+            auto now = id(lokaal1_temperature).state;
+            snprintf(time_buf, sizeof(time_buf), "%.2f", now);
+            return time_buf;
+
 
 binary_sensor:
   - platform: template
     id: airco_1_switch
     lambda: |-
-      if (id(airco_1_state).has_state()) {
+      if (id(lokaal1_temperature).has_state()) {
         std::string state = id(airco_1_state).state;
         return state != "off" && state != "idle";
       }
@@ -19,13 +31,3 @@ binary_sensor:
             id: lokaal1
             state:
               checked: !lambda return x;
-
-interval:
-  - interval: 10s
-    then:
-      - lambda: |-
-          if (id(airco_1_state).has_state()) {
-            ESP_LOGI("airco_log", "Airco 1 state: %s", id(airco_1_state).state.c_str());
-          } else {
-            ESP_LOGI("airco_log", "Airco 1 state: no state yet");
-          }
