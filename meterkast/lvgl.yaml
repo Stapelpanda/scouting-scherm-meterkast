@@ -12,16 +12,6 @@ lvgl:
           text_align: center
           text_color: 0xFFFFFF
 
-      - label:
-          text: "--.-"
-          id: display_temp
-          styles: roboto15_style
-          align: top_left
-          x: 0
-          y: 4
-          text_align: center
-          text_color: 0xFFFFFF
-          
   pages:
     - id: main_page
       bg_color: Black
