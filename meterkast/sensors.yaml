@@ -14,20 +14,3 @@ script:
             auto now = id(lokaal1_temperature).state;
             snprintf(time_buf, sizeof(time_buf), "%.2f", now);
             return time_buf;
-
-
-binary_sensor:
-  - platform: template
-    id: airco_1_switch
-    lambda: |-
-      if (id(lokaal1_temperature).has_state()) {
-        std::string state = id(airco_1_state).state;
-        return state != "off" && state != "idle";
-      }
-      return false;
-    on_state:
-      then:
-        - lvgl.widget.update:
-            id: lokaal1
-            state:
-              checked: !lambda return x;
