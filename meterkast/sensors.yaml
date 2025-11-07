@@ -27,7 +27,7 @@ binary_sensor:
     lambda: |-
       if (id(airco_1_state).has_state()) {
         std::string state = id(airco_1_state).state;
-        return state != "off" && state != "idle";
+        return state != "off";
       }
       return false;
     on_state:
@@ -42,7 +42,7 @@ binary_sensor:
     lambda: |-
       if (id(airco_2_state).has_state()) {
         std::string state = id(airco_2_state).state;
-        return state != "off" && state != "idle";
+        return state != "off";
       }
       return false;
     on_state:
@@ -57,7 +57,7 @@ binary_sensor:
     lambda: |-
       if (id(airco_3_state).has_state()) {
         std::string state = id(airco_3_state).state;
-        return state != "off" && state != "idle";
+        return state != "off";
       }
       return false;
     on_state:
@@ -72,7 +72,7 @@ binary_sensor:
     lambda: |-
       if (id(airco_4_state).has_state()) {
         std::string state = id(airco_4_state).state;
-        return state != "off" && state != "idle";
+        return state != "off";
       }
       return false;
     on_state:
@@ -87,7 +87,7 @@ binary_sensor:
     lambda: |-
       if (id(airco_5_state).has_state()) {
         std::string state = id(airco_5_state).state;
-        return state != "off" && state != "idle";
+        return state != "off";
       }
       return false;
     on_state:
@@ -102,7 +102,7 @@ binary_sensor:
     lambda: |-
       if (id(airco_6_state).has_state()) {
         std::string state = id(airco_6_state).state;
-        return state != "off" && state != "idle";
+        return state != "off";
       }
       return false;
     on_state:
@@ -117,7 +117,7 @@ binary_sensor:
     lambda: |-
       if (id(airco_8_state).has_state()) {
         std::string state = id(airco_8_state).state;
-        return state != "off" && state != "idle";
+        return state != "off";
       }
       return false;
     on_state:
