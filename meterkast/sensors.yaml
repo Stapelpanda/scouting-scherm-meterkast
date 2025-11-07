@@ -27,10 +27,6 @@ text_sensor:
     id: airco_8_state
     entity_id: climate.airco_lokaal_8_airco
     attribute: state
-  - platform: homeassistant
-    id: airco_9_state
-    entity_id: climate.airco_lokaal_9_airco
-    attribute: state
 
 binary_sensor:
   - platform: template
