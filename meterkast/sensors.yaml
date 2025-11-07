@@ -19,3 +19,10 @@ binary_sensor:
             state:
               checked: !lambda |-
                 return !x;
+
+interval:
+  - interval: 10s
+    then:
+      - lambda: |-
+          ESP_LOGI("airco", "Airco status update:");
+          ESP_LOGI("airco", "  Airco 1: %s", id(airco_1_state).state.c_str());
