@@ -4,43 +4,15 @@ text_sensor:
     entity_id: climate.airco_lokaal_1_airco
     on_value:
       then:
-        - component.update: airco_1_switch
-  - platform: homeassistant
-    id: airco_2_state
-    entity_id: climate.airco_lokaal_2_airco
-    on_value:
-      then:
-        - component.update: airco_2_switch
-  - platform: homeassistant
-    id: airco_3_state
-    entity_id: climate.airco_lokaal_3_airco
-    on_value:
-      then:
-        - component.update: airco_3_switch
-  - platform: homeassistant
-    id: airco_4_state
-    entity_id: climate.airco_lokaal_4_airco
-    on_value:
-      then:
-        - component.update: airco_4_switch 
-  - platform: homeassistant
-    id: airco_5_state
-    entity_id: climate.airco_lokaal_5_airco
-    on_value:
-      then:
-        - component.update: airco_5_switch  
-  - platform: homeassistant
-    id: airco_6_state
-    entity_id: climate.airco_lokaal_6_airco
-    on_value:
-      then:
-        - component.update: airco_6_switch    
-  - platform: homeassistant
-    id: airco_8_state
-    entity_id: climate.airco_lokaal_8_airco
-    on_value:
-      then:
-        - component.update: airco_8_switch
+        - binary_sensor.template.publish:
+            id: airco_1_switch
+            state: !lambda |-
+              if (id(airco_1_state).has_state()) {
+                std::string state = id(airco_1_state).state;
+                return state != "off";
+              }
+              return false;
+
 binary_sensor:
   - platform: template
     id: airco_1_switch
@@ -56,107 +28,4 @@ binary_sensor:
             id: lokaal1
             state:
               checked: !lambda |-
-                return !x;
-  - platform: template
-    id: airco_2_switch
-    lambda: |-
-      if (id(airco_2_state).has_state()) {
-        std::string state = id(airco_2_state).state;
-        return state != "off";
-      }
-      return false;
-    on_state:
-      then:
-        - lvgl.widget.update:
-            id: lokaal2
-            state:
-              checked: !lambda |-
-                return !x;
-  - platform: template
-    id: airco_3_switch
-    lambda: |-
-      if (id(airco_3_state).has_state()) {
-        std::string state = id(airco_3_state).state;
-        return state != "off";
-      }
-      return false;
-    on_state:
-      then:
-        - lvgl.widget.update:
-            id: lokaal3
-            state:
-              checked: !lambda |-
-                return !x;
-  - platform: template
-    id: airco_4_switch
-    lambda: |-
-      if (id(airco_4_state).has_state()) {
-        std::string state = id(airco_4_state).state;
-        return state != "off";
-      }
-      return false;
-    on_state:
-      then:
-        - lvgl.widget.update:
-            id: lokaal4
-            state:
-              checked: !lambda |-
-                return !x;
-  - platform: template
-    id: airco_5_switch
-    lambda: |-
-      if (id(airco_5_state).has_state()) {
-        std::string state = id(airco_5_state).state;
-        return state != "off";
-      }
-      return false;
-    on_state:
-      then:
-        - lvgl.widget.update:
-            id: lokaal5
-            state:
-              checked: !lambda |-
-                return !x;
-  - platform: template
-    id: airco_6_switch
-    lambda: |-
-      if (id(airco_6_state).has_state()) {
-        std::string state = id(airco_6_state).state;
-        return state != "off";
-      }
-      return false;
-    on_state:
-      then:
-        - lvgl.widget.update:
-            id: lokaal6
-            state:
-              checked: !lambda |-
-                return !x;
-  - platform: template
-    id: airco_8_switch
-    lambda: |-
-      if (id(airco_8_state).has_state()) {
-        std::string state = id(airco_8_state).state;
-        return state != "off";
-      }
-      return false;
-    on_state:
-      then:
-        - lvgl.widget.update:
-            id: lokaal8
-            state:
-              checked: !lambda |-
-                return !x;
-
-interval:
-  - interval: 10s
-    then:
-      - lambda: |-
-          ESP_LOGI("airco", "Airco status update:");
-          ESP_LOGI("airco", "  Airco 1: %s", id(airco_1_state).state.c_str());
-          ESP_LOGI("airco", "  Airco 2: %s", id(airco_2_state).state.c_str());
-          ESP_LOGI("airco", "  Airco 3: %s", id(airco_3_state).state.c_str());
-          ESP_LOGI("airco", "  Airco 4: %s", id(airco_4_state).state.c_str());
-          ESP_LOGI("airco", "  Airco 5: %s", id(airco_5_state).state.c_str());
-          ESP_LOGI("airco", "  Airco 6: %s", id(airco_6_state).state.c_str());
-          ESP_LOGI("airco", "  Airco 8: %s", id(airco_8_state).state.c_str());
+                return x;
