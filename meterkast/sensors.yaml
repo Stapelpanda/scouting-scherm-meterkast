@@ -200,7 +200,7 @@ binary_sensor:
 
 interval:
   - interval: 10s
-ø    then:
+    then:
       - lambda: |-
           ESP_LOGI("airco", "Airco status update:");
           ESP_LOGI("airco", "  Airco 1: %s", id(airco_1_state).state.c_str());
