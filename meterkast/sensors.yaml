@@ -102,11 +102,34 @@ binary_sensor:
       return false;
     on_state:
       then:
+        # Synchroniseer knopstatus met de airco-status
         - lvgl.widget.update:
             id: lokaal1
             state:
               checked: !lambda |-
                 return x;
+    on_press:
+      then:
+        # Toggle: als airco uit is, zet aan op 18°C auto. Anders zet uit.
+        - lambda: |-
+            if (id(airco_1_state).state == "off") {
+              // Airco aanzetten
+              id(homeassistant_service).execute("climate.set_temperature", {
+                {"entity_id", "climate.airco_lokaal_1_airco"},
+                {"temperature", "18"}
+              });
+              id(homeassistant_service).execute("climate.set_hvac_mode", {
+                {"entity_id", "climate.airco_lokaal_1_airco"},
+                {"hvac_mode", "heat_cool"}
+              });
+              ESP_LOGI("airco", "Airco 1 aangezet (18°C, auto)");
+            } else {
+              // Airco uitschakelen
+              id(homeassistant_service).execute("climate.turn_off", {
+                {"entity_id", "climate.airco_lokaal_1_airco"}
+              });
+              ESP_LOGI("airco", "Airco 1 uitgeschakeld");
+            }
   - platform: template
     id: airco_2_switch
     lambda: |-
