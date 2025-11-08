@@ -92,7 +92,6 @@ text_sensor:
               return false;      
                            
 binary_sensor:
-binary_sensor:
   - platform: template
     id: airco_1_switch
     lambda: |-
