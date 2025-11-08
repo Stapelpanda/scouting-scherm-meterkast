@@ -123,7 +123,7 @@ binary_sensor:
                   service: climate.set_hvac_mode
                   data:
                     entity_id: climate.airco_lokaal_1_airco
-                    hvac_mode: heat_cool
+                    hvac_mode: "heat_cool"
               - logger.log: "Airco 1 aangezet (18°C, auto)"
             else:
               - homeassistant.service:
