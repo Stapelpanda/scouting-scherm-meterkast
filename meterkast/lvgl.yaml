@@ -40,10 +40,15 @@ lvgl:
                 text_font: $icon_font
                 align: LEFT_MID
                 text: $lamp
+          on_click:
+            - homeassistant.service:
+                service: switch.toggle
+                data:
+                  entity_id: switch.meterkast_padverlichting
 
       - button:
           x: 10
-          y: 150
+          y: 200
           width: $button_width_left
           height: $button_height_single
           id: veldverlichting
@@ -58,6 +63,11 @@ lvgl:
                 text_font: $icon_font
                 align: LEFT_MID
                 text: $lamp
+          on_click:
+            - homeassistant.service:
+                service: switch.toggle
+                data:
+                  entity_id: switch.meterkast_veldverlichting
 
       - button:
           x: 270
