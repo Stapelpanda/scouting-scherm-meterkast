@@ -108,29 +108,6 @@ binary_sensor:
             state:
               checked: !lambda |-
                 return x;
-    on_press:
-      then:
-        - if:
-            condition:
-              lambda: 'return id(airco_1_state).state == "off";'
-            then:
-              - homeassistant.service:
-                  service: climate.set_temperature
-                  data:
-                    entity_id: climate.airco_lokaal_1_airco
-                    temperature: "18"
-              - homeassistant.service:
-                  service: climate.set_hvac_mode
-                  data:
-                    entity_id: climate.airco_lokaal_1_airco
-                    hvac_mode: "heat_cool"
-              - logger.log: "Airco 1 aangezet (18°C, auto)"
-            else:
-              - homeassistant.service:
-                  service: climate.turn_off
-                  data:
-                    entity_id: climate.airco_lokaal_1_airco
-              - logger.log: "Airco 1 uitgeschakeld"
   - platform: template
     id: airco_2_switch
     lambda: |-
