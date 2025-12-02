@@ -199,6 +199,27 @@ binary_sensor:
               checked: !lambda |-
                 return x;
 
+  - platform: homeassistant
+    id: padverlichting_switch
+    entity_id: switch.meterkast_padverlichting
+    trigger_on_initial_state: true
+    on_state:
+      then:
+        lvgl.widget.update:
+          id: padverlichting
+          state:
+            checked: !lambda return x;
+
+  - platform: homeassistant
+    id: veldverlichting_switch
+    entity_id: switch.meterkast_veldverlichting
+    trigger_on_initial_state: true
+    on_state:
+      then:
+        lvgl.widget.update:
+          id: veldverlichting
+          state:
+            checked: !lambda return x;           
 interval:
   - interval: 10s
     then:
